@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation2</title>
+    <style>
+      /* box1 */
+      .box {
+        background-color: coral;
+        width: 100px;
+        height: 100px;
+        margin: 60px auto;
+        animation-name: moving;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation: alternate;
+        animation-iteration-count: infinite;
+
+        /* animation: moving 3s alternate infinite ease-in */
+      }
+      @keyframes moving {
+        from {
+          transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+        50% {
+          transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+        to {
+          transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+        }
+      }
+      @keyframes background {
+        from {
+          background-color: rgb(119, 179, 59);
+        }
+        20% {
+          background-color: rgb(149, 92, 187);
+        }
+        to {
+          background-color: rgb(226, 136, 52);
+        }
+      }
+
+      /* box2 */
+      .box2 {
+        background-color: aquamarine;
+        height: 100px;
+        width: 100px;
+        margin: 60px auto;
+        animation: test1 2s alternate infinite ease-in;
+      }
+      @keyframes test1 {
+        from {
+          background-color: aquamarine;
+        }
+        to {
+          background-color: rgb(39, 43, 41);
+        }
+      }
+
+      /* box3 */
+      .box3 {
+        background-color: rgb(226, 80, 255);
+        height: 100px;
+        width: 100px;
+        margin: 60px auto;
+        animation: test2 0.2s alternate infinite ease-in;
+      }
+      @keyframes test2 {
+        0% {
+          background-color: aquamarine;
+          border-radius: 0 0 0 100px;
+        }
+        25% {
+          background-color: blue;
+          border-radius: 100px 0 0 0;
+        }
+        50% {
+          background-color: darkgoldenrod;
+          border-radius: 0 100px 0 0;
+        }
+        75% {
+          background-color: rgb(226, 185, 135);
+          border-radius: 0 0 100px 0;
+        }
+        100% {
+          background-color: rgb(236, 74, 96);
+          border-radius: 0 0 0 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>
